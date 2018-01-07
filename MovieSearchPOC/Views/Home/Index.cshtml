@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/Views/Index.js"></script>
+<div class="jumbotron text-center">   
+    <div>
+        @Html.Label("lblSearch", "Search for a movie", new { @class = "lead" })
+    </div>
+    <div>
+        @Html.TextBox("txtSearchQuery",null,new {@class="searchTextBox"})
+    </div> 
+    <div>
+        <button id="btnGo" class="btn btn-primary" onclick="getSearchResults()">Go</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div id="divSearchResult"></div>
+    </div>
+</div>
